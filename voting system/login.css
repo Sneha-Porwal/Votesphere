@@ -1,0 +1,162 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://erepublic.brightspotcdn.com/dims4/default/92a81f0/2147483647/strip/true/crop/940x490+0+68/resize/840x438!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2F11%2F3f%2Fecc3c208eed8d7fa54f9f45183a9%2Fshutterstock-1268234902.jpg') no-repeat center center/cover;
+}
+
+/* Wrapper */
+.wrapper {
+    position: relative;
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Close Button */
+.icon-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Form Header */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Box */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 40px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #1e3c72;
+}
+
+/* Icons */
+.input-box .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #555;
+}
+
+/* Toggle Password Visibility */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Labels */
+.input-box label {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: 5px;
+    font-size: 12px;
+    color: #1e3c72;
+}
+
+/* Remember & Forgot Password */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.remember-forgot a {
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background: #1e3c72;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #163c6d;
+}
+
+/* Register Link */
+.login-register {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-register a {
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+}
