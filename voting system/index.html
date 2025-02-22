@@ -14,7 +14,6 @@
             <a href="images/votesphere.png" class="text-3xl font-extrabold text-blue-400 tracking-wide drop-shadow-md hover:text-blue-300 transition-all duration-300">
                 Vote<span class="text-white">Sphere</span>
             </a>
-            
             <!-- Menu Items (Desktop) -->
             <ul class="hidden md:flex space-x-8">
                 <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
@@ -47,7 +46,7 @@
 
         <!-- Buttons -->
         <div class="flex gap-6 mt-6 animate-fadeIn">
-            <a href="/register">
+            <a href="/voting system/register.html">
                 <button class="bg-blue-500 px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105 transition-all">
                     Register
                 </button>
@@ -60,26 +59,6 @@
         </div>
     </div>
 
-    <!-- Animation & Mobile Menu Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll('.animate-fadeIn').forEach(element => {
-                element.style.opacity = 0;
-                element.style.transform = "translateY(20px)";
-                setTimeout(() => {
-                    element.style.transition = "opacity 1s ease-out, transform 1s ease-out";
-                    element.style.opacity = 1;
-                    element.style.transform = "translateY(0)";
-                }, 300);
-            });
-
-            // Mobile Menu Toggle
-            const menuBtn = document.getElementById("menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
-            menuBtn.addEventListener("click", () => {
-                mobileMenu.classList.toggle("hidden");
-            });
-        });
     </script>
 </body>
 </html>
