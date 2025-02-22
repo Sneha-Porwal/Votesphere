@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Voting System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="relative min-h-screen bg-gray-900 text-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-gray-800 shadow-lg z-50">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <!-- Logo -->
+            <a href="images/votesphere.png" class="text-3xl font-extrabold text-blue-400 tracking-wide drop-shadow-md hover:text-blue-300 transition-all duration-300">
+                Vote<span class="text-white">Sphere</span>
+            </a>
+            
+            <!-- Menu Items (Desktop) -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
+                <li><a href="#services" class="hover:text-blue-400 transition">Services</a></li>
+                <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+        </nav>
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://cdn.siasat.com/wp-content/uploads/2023/11/Untitled-design-2023-11-12T162122.878.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-6">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-blue-400 drop-shadow-lg animate-fadeIn">
+            Secure & Transparent Voting System
+        </h1>
+        <p class="text-lg text-gray-200 mt-4 leading-relaxed max-w-2xl animate-fadeIn">
+            Experience a next-gen <strong>digital voting system</strong> with <strong>QR-based authentication</strong> and <strong>real-time verification</strong>. 
+            Our platform ensures <strong>security, transparency, and fraud prevention</strong>, empowering every voter to cast their vote fairly.
+        </p>
+
+        <!-- Quote -->
+        <p class="text-md text-gray-300 italic mt-3 animate-fadeIn">
+            "Every vote counts, and every voter matters!"
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex gap-6 mt-6 animate-fadeIn">
+            <a href="/register">
+                <button class="bg-blue-500 px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105 transition-all">
+                    Register
+                </button>
+            </a>
+            <a href="/login">
+                <button class="bg-green-500 px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:bg-green-700 hover:scale-105 transition-all">
+                    Login
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Animation & Mobile Menu Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.animate-fadeIn').forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = "translateY(20px)";
+                setTimeout(() => {
+                    element.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+                    element.style.opacity = 1;
+                    element.style.transform = "translateY(0)";
+                }, 300);
+            });
+
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+    </script>
+</body>
+</html>
