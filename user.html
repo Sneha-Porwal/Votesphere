@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System Dashboard</title>
+    <link rel="stylesheet" href="user.css">
+    <script defer src="user.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Voting System Dashboard</h1>
+        <div class="dashboard">
+            <div class="card">
+                <i class="icon user"></i>
+                <h2>Voter Profile</h2>
+                <p>View and update your details</p>
+                <button onclick="viewProfile()">View</button>
+            </div>
+            <div class="card">
+                <i class="icon check"></i>
+                <h2>Verification Status</h2>
+                <p>Check your ID verification</p>
+                <button onclick="viewVerification()">Details</button>
+            </div>
+            <div class="card">
+                <i class="icon vote"></i>
+                <h2>Cast Vote</h2>
+                <p>Vote securely using blockchain</p>
+                <button onclick="castVote()">Vote Now</button>
+            </div>
+            <div class="card">
+                <i class="icon chart"></i>
+                <h2>Live Results</h2>
+                <p>View real-time election results</p>
+                <button onclick="viewResults()">View</button>
+            </div>
+        </div>
+        <div class="progress-section">
+            <h2>Voting Participation</h2>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+            <p>75% of registered voters have cast their vote.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+

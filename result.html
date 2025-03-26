@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Results</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Election Results</h1>
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Candidate</th>
+                    <th>Party</th>
+                    <th>Votes</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+                <!-- Dynamic results will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        // Sample election results data
+        const results = [
+            { candidate: "Ambika Mishra", party: "Party A", votes: 4500, percentage: "45%" },
+            { candidate: "Sneha Porwal", party: "Party B", votes: 3500, percentage: "35%" },
+            { candidate: "Ritika Dongre", party: "Party C", votes: 2000, percentage: "20%" }
+        ];
+
+        function loadResults() {
+            const resultsBody = document.getElementById("results-body");
+            results.forEach(result => {
+                const row = `<tr>
+                                <td>${result.candidate}</td>
+                                <td>${result.party}</td>
+                                <td>${result.votes}</td>
+                                <td>${result.percentage}</td>
+                            </tr>`;
+                resultsBody.innerHTML += row;
+            });
+        }
+
+        window.onload = loadResults;
+    </script>
+</body>
+</html>

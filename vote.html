@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cast Your Vote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cast Your Vote</h1>
+        <form id="vote-form">
+            <p>Select your candidate:</p>
+            <label>
+                <input type="radio" name="candidate" value="Alice Johnson"> Alice Johnson
+            </label><br>
+            <label>
+                <input type="radio" name="candidate" value="Bob Smith"> Bob Smith
+            </label><br>
+            <label>
+                <input type="radio" name="candidate" value="Charlie Brown"> Charlie Brown
+            </label><br>
+            <button type="button" onclick="submitVote()">Submit Vote</button>
+        </form>
+    </div>
+    <script>
+        function submitVote() {
+            const selectedCandidate = document.querySelector('input[name="candidate"]:checked');
+            if (selectedCandidate) {
+                alert("You have voted for: " + selectedCandidate.value);
+                // You can add further processing here, like saving the vote to a database.
+            } else {
+                alert("Please select a candidate before submitting.");
+            }
+        }
+    </script>
+</body>
+</html>
